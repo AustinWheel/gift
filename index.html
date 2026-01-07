@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>妈妈生日快乐</title>
+    <style>
+        body { background: pink; text-align: center; padding: 50px; }
+        .box { background: white; padding: 30px; border-radius: 20px; margin: 20px; }
+        button { background: red; color: white; padding: 15px; border: none; border-radius: 10px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🎂 妈妈生日快乐！ 🎁</h1>
+    <div class="box">
+        <h2 id="gift">点击按钮拆盲盒</h2>
+        <button onclick="openGift()">拆开盲盒</button>
+    </div>
+    <script>
+        function openGift() {
+            const gifts = ["一个拥抱", "一顿大餐", "一次按摩", "陪您逛街"];
+            const random = gifts[Math.floor(Math.random() * gifts.length)];
+            document.getElementById("gift").innerHTML = "🎉 您获得了：" + random;
+        }
+    </script>
+</body>
+</html>
